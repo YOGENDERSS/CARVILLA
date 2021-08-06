@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>PRASHANT</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+
+<style>
+
+
+body{
+    background-color: black;
+}
+
+.card {
+
+    display: inline-block;
+    margin: 6px;
+
+}
+
+.card-body{
+    background-color:#434343;
+    color: whitesmoke;
+
+}
+
+.sticky-top{
+position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+
+
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+.card-title{
+  display: inline-block;
+}
+.card-text{
+  font-weight: bolder;
+  text-align: center;
+    font-size: 20px;
+    background-color: pink;
+}
+
+.btn{
+  margin-left: 109px;
+}
+
+.card{
+  background-color: #959595;
+}
+</style>
+    </head>
+    <body>
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+        <!--  <i class="fab fal fa-500px" style="margin:10px"></i>          ICON  -->
+        <img class="logo" src="https://www.carlogos.org/car-logos/tesla-logo-2200x2800-show.png" style=" width: 55px;margin-left: 6px;margin-right: 20px">
+          <a class="navbar-brand" href="#">CARVILLA</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                 <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+                 <a class="nav-link" href="#"><i class="fa fa-fw fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <!-- <a class="nav-link" href="#contacts">Contact</a> -->
+                  <a class="nav-link" href="contacts.html"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#projects"><i class="fa fa-tasks" aria-hidden="true"></i>Cart</a>
+                </li>
+                <li class="nav-item ">
+                  <!-- <a class="nav-link" href="#Skills">Work Experience</a> -->
+                  <a class="nav-link" href="#Skills" ><i class="fa fa-laptop" aria-hidden="true"></i>Logout</a>
+                </li>
+                <form> 
+                  <input type="search" placeholder="search here.." name="search" id="searchTxt" style="height: 40px;margin-left: 18px;">
+                  <button type="submit" style="height: 40px;" onclick="sort(event)" >Sort</button>
+                  <button id='btnGiveCommand'>Give Command!</button>
+                </form>
+              </ul>
+            </div>
+      </nav>
+
+<!--  crousel  -->
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1514316703755-dca7d7d9d882?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1556448851-9359658faa54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<!--  crousel  -->
+<!-- cars  -->
+<div style="display : flex; flex-wrap: wrap;justify-content: center;">
+<div class="card" style="width: 22rem;">
+    <img src="https://www.slashgear.com/wp-content/uploads/2019/09/audi-rs7-578-1280x720.jpg" class="card-img-top" alt="...">
+    <!-- <div class="card-body"> -->
+        <p class="card-text sa" id="ss">Audi R1</p>
+        <h5 class="card-title">3000</h5><p><b>Rs./Per day</b></p>
+      <a href="validh.html" class="btn btn-primary" id="booknow">BOOK NOW</a>
+    <!-- </div> -->
+  </div>
+<div class="card" style="width: 22rem;">
+    <img src="https://audimediacenter-a.akamaihd.net/system/production/media/91178/images/1f201fd6f5fcbd78b452dd0ff4907b1cc4dc0a8c/A202506_blog.jpg?1587377988" class="card-img-top" alt="...">
+    <!-- <div class="card-body"> -->
+        <p class="card-text">Audi R2</p> 
+        <h5 class="card-title">2000</h5><p><b>Rs./Per day</b></p>
+      <a href="validh.html" class="btn btn-primary">BOOK NOW</a>
+    <!-- </div> -->
+  </div>
+<div class="card" style="width: 22rem;">
+    <img src="https://cdn.motor1.com/images/mgl/bR9Pv/s3/audi-rs3-sedan-by-abt.jpg" class="card-img-top" alt="...">
+    <!-- <div class="card-body"> -->
+        <p class="card-text">Audi R3</p>
+        <h5 class="card-title">6000</h5><p><b>Rs./Per day</b></p>
+      <a href="validh.html" class="btn btn-primary">BOOK NOW</a>
+    <!-- </div> -->
+  </div>
+<div class="card" style="width: 22rem;">
+    <img src="https://images.hindustantimes.com/auto/img/2020/05/27/600x338/Mercedes_E-class-coupe-facelift_1590587951203_1590587959536.jpg" class="card-img-top" alt="...">
+    <!-- <div class="card-body"> -->
+        <p class="card-text">Benz</p>
+        <h5 class="card-title">4000</h5><p><b>Rs./Per day</b></p>
+      <a href="validh.html" class="btn btn-primary">BOOK NOW</a>
+    <!-- </div> -->
+  </div>
+<div class="card" style="width: 22rem;">
+    <img src="https://s01.sgp1.digitaloceanspaces.com/large/885364-keuegpytsq-1530771940.jpg" height="197px" class="card-img-top" alt="...">
+    <!-- <div class="card-body"> -->
+        <p class="card-text">Nano</p>
+        <h5 class="card-title">5000</h5><p><b>Rs./Per day</b></p>
+      <a href="validh.html" class="btn btn-primary">BOOK NOW</a>
+    <!-- </div> -->
+  </div>
+<div class="card" style="width: 22rem;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Maruti_Suzuki_-_Alto_800_LXi.JPG/1280px-Maruti_Suzuki_-_Alto_800_LXi.JPG" class="card-img-top" height="197px" alt="...">
+    <!-- <div class="card-body"> -->
+        <p class="card-text">Alto 800</p>
+        <h5 class="card-title">8000</h5><p><b>Rs./Per day</b></p>
+      <a href="validh.html" class="btn btn-primary">BOOK NOW</a>
+    <!-- </div> -->
+  </div>
+<div class="card" style="width: 22rem;">
+    <img src="https://stat.overdrive.in/wp-content/odgallery/2018/01/40157__ANI1352.JPG" height="197px" class="card-img-top" alt="...">
+    <!-- <div class="card-body"> -->
+        <p class="card-text">Swift</p>
+        <h5 class="card-title">7000</h5><p><b>Rs./Per day</b></p>
+      <a href="validh.html" class="btn btn-primary">BOOK NOW</a>
+    <!-- </div> -->
+  </div>
+<div class="card" style="width: 22rem;">
+    <img src="https://i.ndtvimg.com/i/2017-06/maruti-suzuki-dzire-styling_827x510_81498479945.jpg" height="197px" class="card-img-top" alt="...">
+    <!-- <div class="card-body"> -->
+        <p class="card-text">Swift dezire</p>
+        <h5 class="card-title">9000</h5><p><b>Rs./Per day</b></p>
+      <a href="validh.html" class="btn btn-primary">BOOK NOW</a>
+    <!-- </div> -->
+  </div>
+<div class="card" style="width: 22rem;">
+    <img src="https://images.jdmagicbox.com/quickquotes/images_main/hyundai-eon-new-petrol-coral-white-82694463-50s5n.png" class="card-img-top" height="197px" alt="...">
+    <!-- <div class="card-body"> -->
+        <p class="card-text">Eon</p>
+        <h5 class="card-title">1150</h5><p><b>Rs./Per day</b></p>
+      <a href="validh.html" class="btn btn-primary">BOOK NOW</a>
+    <!-- </div> -->
+  </div>
+<div class="card" style="width: 22rem;">
+    <img src="https://images.fastcompany.net/image/upload/w_596,c_limit,q_auto:best,f_auto/fc/3028586-inline-i-2-the-ultimate-driverless-car-report-card.jpg" class="card-img-top" alt="...">
+    <!-- <div class="card-body"> -->
+        <p class="card-text">Verna</p>
+        <h5 class="card-title">9500</h5><p><b>Rs./Per day</b></p>
+      <a href="validh.html" class="btn btn-primary">BOOK NOW</a>
+    <!-- </div> -->
+  </div>
+  
+<div class="card" style="width: 22rem;">
+    <img src="https://www.miamilakesautomall.com/jeep-blog/wp-content/uploads/sites/84/2020/05/MLAM-2020-Jeep-Wrangler.jpg" class="card-img-top" alt="...">
+    <!-- <div class="card-body"> -->
+        <p class="card-text">Jeep</p>
+        <h5 class="card-title">1100</h5><p><b>Rs./Per day</b></p>
+      <a href="validh.html" class="btn btn-primary">BOOK NOW</a>
+    <!-- </div> -->
+  </div>
+  
+<div class="card" style="width: 22rem;">
+    <img src="https://i.cdn.newsbytesapp.com/images/203_23001594965786.jpg" class="card-img-top" alt="...">
+    <!-- <div class="card-body"> -->
+        <p class="card-text">Thar</p>
+        <h5 class="card-title">1200</h5><p><b>Rs./Per day</b></p>
+      <a href="validh.html" class="btn btn-primary">BOOK NOW</a>
+    <!-- </div> -->
+  </div>
+  
+  
+
+  <!-- cars  -->
+
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src="https://img.icons8.com/color/96/000000/car.png"/>
+				<h3>About<span>Carvilla</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					|
+					<a href="#">Blog</a>
+					|
+					<a href="#">About</a>
+					|
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© 2020 Carvilla Pvt. Ltd.</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>309 - Rupa Solitaire,
+						 Bldg. No. A - 1, Sector - 1</span>
+						Barwala, Haryana - 125121</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 22-27782183</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="#">support@carvilla.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We offer the Luxry and economical cars to our customers on rent basis.</p>
+				<div class="footer-icons">
+					<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-youtube"></a>
+				</div>
+			</div>
+    </footer>
+    
+    <script src="homepage.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

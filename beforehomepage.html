@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>PRASHANT</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			background-color: black;
+		}
+
+
+		h2 {
+
+			margin: 0px;
+			padding: 0px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			/*display: inline-block;*/
+			width: 100%;
+			text-align: center;
+			font-size: 3em;
+		}
+
+		span {
+			animation: animate 1s linear forwards;
+			opacity: 0;
+			display: inline-block;
+		}
+
+		@keyframes animate {
+			0% {
+				opacity: 0;
+				transform: rotateY(90deg);
+				filter: blur(10px);
+			}
+
+			100% {
+				opacity: 1;
+				transform: rotateY(0deg);
+				filter: blur(0px);
+			}
+		}
+
+		video {
+			/* object-fit: cover; */
+			max-width: 100%;
+			/* Force Correct Aspect Ratio */
+			height: auto !important;
+		}
+
+		span {
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			font-size: 100px;
+			color: whitesmoke;
+		}
+
+		span:nth-child(1) {
+			animation-delay: 1.4s;
+		}
+
+		span:nth-child(2) {
+			animation-delay: 1.6s;
+		}
+
+		span:nth-child(3) {
+			animation-delay: 2s;
+		}
+
+		span:nth-child(4) {
+			animation-delay: 2.5s;
+		}
+
+		span:nth-child(5) {
+			animation-delay: 3s;
+		}
+
+		span:nth-child(6) {
+			animation-delay: 3.4s;
+		}
+
+		span:nth-child(7) {
+			animation-delay: 3.6s;
+		}
+
+		span:nth-child(8) {
+			animation-delay: 3.7s;
+		}
+
+
+		.card {
+
+			display: inline-block;
+			margin: 6px;
+
+		}
+
+		.card-body {
+			background-color: #434343;
+			color: whitesmoke;
+
+		}
+
+		.sticky-top {
+			position: sticky;
+			top: 0;
+			z-index: 1020;
+		}
+
+
+
+
+		@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+		footer {
+			position: fixed;
+			bottom: 0;
+		}
+
+		@media (max-height:800px) {
+			footer {
+				position: static;
+			}
+
+			header {
+				padding-top: 40px;
+			}
+		}
+
+
+		.footer-distributed {
+			background-color: #2c292f;
+			box-sizing: border-box;
+			width: 100%;
+			text-align: left;
+			font: bold 16px sans-serif;
+			padding: 50px 50px 60px 50px;
+			margin-top: 80px;
+		}
+
+		.footer-distributed .footer-left,
+		.footer-distributed .footer-center,
+		.footer-distributed .footer-right {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		/* Footer left */
+
+		.footer-distributed .footer-left {
+			width: 30%;
+		}
+
+		.footer-distributed h3 {
+			color: #ffffff;
+			font: normal 36px 'Cookie', cursive;
+			margin: 0;
+		}
+
+		/* The company logo */
+
+		.footer-distributed .footer-left img {
+			width: 30%;
+		}
+
+		.footer-distributed h3 span {
+			color: #e0ac1c;
+		}
+
+		/* Footer links */
+
+		.footer-distributed .footer-links {
+			color: #ffffff;
+			margin: 20px 0 12px;
+		}
+
+		.footer-distributed .footer-links a {
+			display: inline-block;
+			line-height: 1.8;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		.footer-distributed .footer-company-name {
+			color: #8f9296;
+			font-size: 14px;
+			font-weight: normal;
+			margin: 0;
+		}
+
+		/* Footer Center */
+
+		.footer-distributed .footer-center {
+			width: 35%;
+		}
+
+
+		.footer-distributed .footer-center i {
+			background-color: #33383b;
+			color: #ffffff;
+			font-size: 25px;
+			width: 38px;
+			height: 38px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 42px;
+			margin: 10px 15px;
+			vertical-align: middle;
+		}
+
+		.footer-distributed .footer-center i.fa-envelope {
+			font-size: 17px;
+			line-height: 38px;
+		}
+
+		.footer-distributed .footer-center p {
+			display: inline-block;
+			color: #ffffff;
+			vertical-align: middle;
+			margin: 0;
+		}
+
+		.footer-distributed .footer-center p span {
+			display: block;
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 2;
+		}
+
+		.footer-distributed .footer-center p a {
+			color: #e0ac1c;
+			text-decoration: none;
+			;
+		}
+
+
+		/* Footer Right */
+
+		.footer-distributed .footer-right {
+			width: 30%;
+		}
+
+		.footer-distributed .footer-company-about {
+			line-height: 20px;
+			color: #92999f;
+			font-size: 13px;
+			font-weight: normal;
+			margin: 0;
+		}
+
+		.footer-distributed .footer-company-about span {
+			display: block;
+			color: #ffffff;
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+
+		.footer-distributed .footer-icons {
+			margin-top: 25px;
+		}
+
+		.footer-distributed .footer-icons a {
+			display: inline-block;
+			width: 35px;
+			height: 35px;
+			cursor: pointer;
+			background-color: #33383b;
+			border-radius: 2px;
+
+			font-size: 20px;
+			color: #ffffff;
+			text-align: center;
+			line-height: 35px;
+
+			margin-right: 3px;
+			margin-bottom: 5px;
+		}
+
+		/* Here is the code for Responsive Footer */
+		/* You can remove below code if you don't want Footer to be responsive */
+
+
+		@media (max-width: 880px) {
+
+			.footer-distributed .footer-left,
+			.footer-distributed .footer-center,
+			.footer-distributed .footer-right {
+				display: block;
+				width: 100%;
+				margin-bottom: 40px;
+				text-align: center;
+			}
+
+			.footer-distributed .footer-center i {
+				margin-left: 0;
+			}
+
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+		<!--  <i class="fab fal fa-500px" style="margin:10px"></i>          ICON  -->
+		<img class="logo" src="https://www.carlogos.org/car-logos/tesla-logo-2200x2800-show.png"
+			style=" width: 55px;margin-left: 6px;margin-right: 20px">
+		<a class="navbar-brand" href="#">CARVILLA</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+					<a class="nav-link" href="#"><i class="fa fa-fw fa-home"></i>Home <span
+							class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<!-- <a class="nav-link" href="#contacts">Contact</a> -->
+					<a class="nav-link" href="#contacts"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#projects"><i class="fa fa-tasks" aria-hidden="true"></i>Cart</a>
+				</li>
+				<li class="nav-item ">
+					<!-- <a class="nav-link" href="#Skills">Work Experience</a> -->
+					<a class="nav-link" href="#Skills"><i class="fa fa-laptop" aria-hidden="true"></i>Logout</a>
+				</li>
+				<form>
+					<input type="search" placeholder="search here.." name="search"
+						style="height: 40px;margin-left: 18px;">
+					<button type="submit" style="height: 40px;"><i class="fa fa-search"></i></button>
+				</form>
+			</ul>
+		</div>
+	</nav>
+	<div style="background: black; height: 100vh;">
+
+		<video src="smoke.mp4" autoplay muted></video>
+		<h2 class="new">
+
+			<span style="background-color: lawngreen; color: black;border-radius: 10px;     box-shadow: 3px 2px 105px lawngreen;">C</span>
+			<span style="background-color: lawngreen; color: black;    border-radius: 10px;    box-shadow: 3px 2px 105px lawngreen;">A</span>
+			<span style="background-color: lawngreen; color: black;    border-radius: 10px;     box-shadow: 3px 2px 105px lawngreen;">R</span>
+			<span style="text-shadow: 2px 2px 44px red;">V</span>
+			<span style="text-shadow: 2px 2px 44px red;">I</span>
+			<span style="text-shadow: 2px 2px 44px red;">L</span>
+			<span style="text-shadow: 2px 2px 44px red;">L</span>
+			<span style="text-shadow: 2px 2px 44px red;">A</span>
+
+
+		</h2>
+		<div class="jumbotron">
+			<h1 class="display-4">Welcome To CarVilla !!</h1>
+			<p class="lead">We provide normal and luxry range cars on rent to our customers in best price.</p>
+			<hr class="my-4">
+			<p>OUR MOTO IS TO HELP THE PEOPLE, NOT HAVING THERE OWN CARS.</p>
+			<a class="btn btn-primary btn-lg" href="#section" role="button">Cars Section</a>
+		</div>
+		<!--  crousel  -->
+		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+				<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
+						class="d-block w-100" alt="...">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>First slide label</h5>
+						<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="https://images.unsplash.com/photo-1514316703755-dca7d7d9d882?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+						class="d-block w-100" alt="...">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Second slide label</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="https://images.unsplash.com/photo-1556448851-9359658faa54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+						class="d-block w-100" alt="...">
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Third slide label</h5>
+						<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+		<!--  crousel  -->
+		<!-- cars  -->
+		<div style="display : flex; flex-wrap: wrap;justify-content: center;" id="section">
+			<div class="card" style="width: 22rem;">
+				<img src="https://assets.newatlas.com/dims4/default/0a221fd/2147483647/strip/true/crop/1619x1079+0+0/resize/1200x800!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Farchive%2F2019-honda-insight-review-11.jpg"
+					style="height: 263px;" class="card-img-top" alt="...">
+				<div class="card-body">
+					<p class="card-text" style="color: #00ffa7;">click on check now to see the avilable cars</p>
+					<h5 class="card-title">NORMAL CARS</h5>
+					<a href="homepage.html" class="btn btn-primary">CHECK NOW</a>
+				</div>
+			</div>
+			<div class="card" style="width: 22rem;">
+				<img src="https://m.economictimes.com/thumb/msid-67391170,width-1200,height-900,resizemode-4,imgsize-399428/6.jpg"
+					class="card-img-top" alt="...">
+				<div class="card-body">
+					<p class="card-text" style="color: #00ffa7;">click on check now to see the avilable cars</p>
+					<h5 class="card-title">LUXRY CARS</h5>
+					<a href="homepage.html" class="btn btn-primary">CHECK NOW</a>
+				</div>
+			</div>
+		</div>
+
+
+		<footer class="footer-distributed">
+
+			<div class="footer-left">
+				<img src="https://img.icons8.com/color/96/000000/car.png" />
+				<h3>About<span>Carvilla</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					|
+					<a href="#">Blog</a>
+					|
+					<a href="#">About</a>
+					|
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© 2020 Carvilla Pvt. Ltd.</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>309 - Rupa Solitaire,
+							Bldg. No. A - 1, Sector - 1</span>
+						Barwala, Haryana - 125121</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 22-27782183</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="#">support@carvilla.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We offer the Luxry and economical cars to our customers on rent basis.</p>
+				<div class="footer-icons">
+					<a href="#" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-twitter"></a>
+					<a href="#" class="fa fa-google"></a>
+					<a href="#" class="fa fa-linkedin"></a>
+					<a href="#" class="fa fa-youtube"></a>
+				</div>
+			</div>
+		</footer>
+</body>
+
+</html>
